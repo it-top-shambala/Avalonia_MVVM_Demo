@@ -12,5 +12,26 @@
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
+    
+    <Grid ColumnDefinitions="*, 2*">
+        <ListBox Grid.Column="0" 
+                 Items="{Binding Persons}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <material:Card Margin="5">
+                        <DockPanel LastChildFill="True">
+                            <TextBlock DockPanel.Dock="Top" 
+                                       Text="{Binding Id}"/>
+                            <TextBlock Text="{Binding Name}"/>
+                        </DockPanel>
+                    </material:Card>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        
+        <StackPanel Grid.Column="1">
+            <TextBlock Text="Person"/>
+        </StackPanel>
+    </Grid>
 
 </Window>
