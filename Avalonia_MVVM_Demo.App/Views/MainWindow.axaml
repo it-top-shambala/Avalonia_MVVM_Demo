@@ -13,8 +13,4 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <StackPanel>
-        
-    </StackPanel>
-
 </Window>
