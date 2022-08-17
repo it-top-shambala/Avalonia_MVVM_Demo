@@ -1,0 +1,16 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:Avalonia_MVVM_Demo.App"
+             xmlns:themes="clr-namespace:Material.Styles.Themes;assembly=Material.Styles"
+             x:Class="Avalonia_MVVM_Demo.App.App">
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+
+    <Application.Resources>
+        <themes:BundledTheme BaseTheme="Light" PrimaryColor="Teal" SecondaryColor="Amber"/>
+    </Application.Resources>
+    <Application.Styles>
+        <StyleInclude Source="avares://Material.Avalonia/Material.Avalonia.Templates.xaml" />
+    </Application.Styles>
+</Application>
