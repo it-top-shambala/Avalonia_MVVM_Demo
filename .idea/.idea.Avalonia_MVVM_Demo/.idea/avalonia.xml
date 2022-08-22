@@ -5,6 +5,7 @@
       <map>
         <entry key="Avalonia_MVVM_Demo.App/App.axaml" value="Avalonia_MVVM_Demo.App/Avalonia_MVVM_Demo.App.csproj" />
         <entry key="Avalonia_MVVM_Demo.App/Views/MainWindow.axaml" value="Avalonia_MVVM_Demo.App/Avalonia_MVVM_Demo.App.csproj" />
+        <entry key="Avalonia_MVVM_Demo.App/Views/Styles.axaml" value="Avalonia_MVVM_Demo.App/Avalonia_MVVM_Demo.App.csproj" />
       </map>
     </option>
   </component>

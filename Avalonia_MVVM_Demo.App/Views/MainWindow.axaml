@@ -8,6 +8,15 @@
         x:Class="Avalonia_MVVM_Demo.App.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="Avalonia_MVVM_Demo.App">
+    
+    <Window.Styles>
+        <Style Selector="Label">
+            <Setter Property="Width" Value="125"/>
+        </Style>
+        <Style Selector="TextBox">
+            <Setter Property="Width" Value="350"/>
+        </Style>
+    </Window.Styles>
 
     <Design.DataContext>
         <vm:MainWindowViewModel/>
@@ -15,7 +24,8 @@
     
     <Grid ColumnDefinitions="*, 2*">
         <ListBox Grid.Column="0" 
-                 Items="{Binding Persons}">
+                 Items="{Binding Persons}"
+                 SelectedItem="{Binding Person}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <material:Card Margin="5">
@@ -30,7 +40,18 @@
         </ListBox>
         
         <StackPanel Grid.Column="1">
-            <TextBlock Text="Person"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="#" />
+                <TextBox Text="{Binding Person.Id}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Name" />
+                <TextBox Text="{Binding Person.Name}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Company name" />
+                <TextBox Text="{Binding Person.Company.Name}"/>
+            </StackPanel>
         </StackPanel>
     </Grid>
 
